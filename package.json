@@ -104,7 +104,7 @@
     "@umijs/lint": "^4",
     "@vitest/coverage-v8": "latest",
     "commitlint": "^17",
-    "eslint": "^8",
+    "eslint": "^9",
     "husky": "^8",
     "jsdom": "^22",
     "lint-staged": "^13",
