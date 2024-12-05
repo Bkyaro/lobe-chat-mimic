@@ -1,4 +1,4 @@
-import { LangChainParams } from '../../types/langchain';
+import { LangChainParams } from '@/types/langchain';
 import { LangChainStream } from './LangChainStream';
 
 if (!process.env.OPENAI_API_KEY) {

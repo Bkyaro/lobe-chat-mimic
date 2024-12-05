@@ -1,12 +1,12 @@
-import { LangChainParams } from '../../types/langchain';
-import { LLMChain } from 'langchain/chains';
-import { ChatOpenAI } from '@langchain/openai';
+import { LangChainParams } from '@/types/langchain';
 import {
   AIMessagePromptTemplate,
   ChatPromptTemplate,
   HumanMessagePromptTemplate,
   SystemMessagePromptTemplate,
 } from '@langchain/core/prompts';
+import { ChatOpenAI } from '@langchain/openai';
+import { LLMChain } from 'langchain/chains';
 
 const isDev = process.env.NODE_ENV === 'development';
 const OPENAI_PROXY_URL = process.env.OPENAI_PROXY_URL;
@@ -81,9 +81,9 @@ export function LangChainStream(payload: LangChainParams) {
         await chain.call(vars);
         // 完成后，关闭流
         controller.close();
-      } catch (e) {
+      } catch (error) {
         // 如果在执行过程中发生错误，向流发送错误
-        controller.error(e);
+        controller.error(error);
       }
     },
   });

@@ -1,6 +1,6 @@
-import { ChatMessage } from '@lobehub/ui';
-import { ChatOpenAI } from '@langchain/openai';
 import { AIMessage, HumanMessage, SystemMessage } from '@langchain/core/messages';
+import { ChatOpenAI } from '@langchain/openai';
+import { ChatMessage } from '@lobehub/ui';
 
 const isDev = process.env.NODE_ENV === 'development';
 const OPENAI_PROXY_URL = process.env.OPENAI_PROXY_URL;
@@ -13,7 +13,7 @@ export interface OpenAIStreamPayload {
    * @title 模型名称
    */
   model: string;
-  /**
+  /**gst
    * @title 聊天信息列表
    */
   messages: ChatMessage[];
@@ -108,9 +108,9 @@ export function OpenAIStream(payload: OpenAIStreamPayload) {
         await chat.call(chatMessages);
         // 完成后，关闭流
         controller.close();
-      } catch (e) {
+      } catch (error) {
         // 如果在执行过程中发生错误，向流发送错误
-        controller.error(e);
+        controller.error(error);
       }
     },
   });
