@@ -27,6 +27,7 @@ const Config = () => {
       mode={'float'}
       pin
       resize={{ left: false }}
+      size={{ width: 400 }}
       expand={showAgentSettings}
       className={styles.drawer}
     >
