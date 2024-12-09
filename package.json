@@ -67,7 +67,7 @@
     "antd": "^5",
     "antd-style": "^3",
     "brotli-wasm": "^1",
-    "chroma-js": "^2",
+    "chroma-js": "^3",
     "fast-deep-equal": "^3",
     "gpt-tokenizer": "^2",
     "i18next": "^23",
