@@ -116,7 +116,7 @@
     "prettier-plugin-packagejson": "^2",
     "semantic-release": "^21",
     "semantic-release-config-gitmoji": "^1",
-    "stylelint": "^15",
+    "stylelint": "^16",
     "typescript": "^5",
     "vitest": "latest"
   }
