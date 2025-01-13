@@ -85,7 +85,7 @@
     "react-layout-kit": "^1",
     "swr": "^2",
     "ts-md5": "^1",
-    "zustand": "^4",
+    "zustand": "^5",
     "zustand-utils": "^1"
   },
   "devDependencies": {
